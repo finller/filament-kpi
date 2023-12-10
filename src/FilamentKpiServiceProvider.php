@@ -8,13 +8,13 @@ use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
+use Finller\FilamentKpi\Commands\FilamentKpiCommand;
+use Finller\FilamentKpi\Testing\TestsFilamentKpi;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Finller\FilamentKpi\Commands\FilamentKpiCommand;
-use Finller\FilamentKpi\Testing\TestsFilamentKpi;
 
 class FilamentKpiServiceProvider extends PackageServiceProvider
 {

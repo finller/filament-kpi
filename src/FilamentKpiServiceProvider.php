@@ -2,13 +2,9 @@
 
 namespace Finller\FilamentKpi;
 
-use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
-use Finller\FilamentKpi\Commands\FilamentKpiCommand;
 use Finller\FilamentKpi\Testing\TestsFilamentKpi;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
@@ -80,7 +76,7 @@ class FilamentKpiServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/filament-kpi/{$file->getFilename()}"),
                 ], 'filament-kpi-stubs');
@@ -103,8 +99,8 @@ class FilamentKpiServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-kpi', __DIR__ . '/../resources/dist/components/filament-kpi.js'),
-            Css::make('filament-kpi-styles', __DIR__ . '/../resources/dist/filament-kpi.css'),
-            Js::make('filament-kpi-scripts', __DIR__ . '/../resources/dist/filament-kpi.js'),
+            // Css::make('filament-kpi-styles', __DIR__ . '/../resources/dist/filament-kpi.css'),
+            // Js::make('filament-kpi-scripts', __DIR__ . '/../resources/dist/filament-kpi.js'),
         ];
     }
 
@@ -114,7 +110,6 @@ class FilamentKpiServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            FilamentKpiCommand::class,
         ];
     }
 
@@ -148,7 +143,7 @@ class FilamentKpiServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_filament-kpi_table',
+
         ];
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Finller\FilamentKpi\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentKpiCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-kpi';
 
     public $description = 'My command';
 
